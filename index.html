@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fee Payment Portal - My Account</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>EduPay Portal</span>
+            </div>
+            <nav class="nav-menu">
+                <a href="#dashboard" class="nav-link active">Dashboard</a>
+                <a href="#payments" class="nav-link">Payments</a>
+                <a href="#history" class="nav-link">History</a>
+                <a href="#profile" class="nav-link">Profile</a>
+            </nav>
+            <div class="nav-user">
+                <i class="fas fa-user-circle"></i>
+                <span>John Doe</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-menu">
+                <a href="#" class="sidebar-item active">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="#" class="sidebar-item">
+                    <i class="fas fa-credit-card"></i>
+                    <span>Make Payment</span>
+                </a>
+                <a href="#" class="sidebar-item">
+                    <i class="fas fa-history"></i>
+                    <span>Payment History</span>
+                </a>
+                <a href="#" class="sidebar-item">
+                    <i class="fas fa-file-invoice-dollar"></i>
+                    <span>Fee Structure</span>
+                </a>
+                <a href="#" class="sidebar-item">
+                    <i class="fas fa-download"></i>
+                    <span>Download Receipt</span>
+                </a>
+                <a href="#" class="sidebar-item">
+                    <i class="fas fa-question-circle"></i>
+                    <span>Help & Support</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Dashboard Content -->
+        <div class="content-area">
+            <!-- Account Summary Cards -->
+            <section class="dashboard-cards">
+                <div class="card balance-card">
+                    <div class="card-header">
+                        <h3>Account Balance</h3>
+                        <i class="fas fa-wallet"></i>
+                    </div>
+                    <div class="card-content">
+                        <div class="amount">$2,450.00</div>
+                        <div class="status positive">+$150 this month</div>
+                    </div>
+                </div>
+
+                <div class="card dues-card">
+                    <div class="card-header">
+                        <h3>Pending Dues</h3>
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <div class="card-content">
+                        <div class="amount">$850.00</div>
+                        <div class="status negative">Due in 5 days</div>
+                    </div>
+                </div>
+
+                <div class="card paid-card">
+                    <div class="card-header">
+                        <h3>Total Paid</h3>
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="card-content">
+                        <div class="amount">$3,200.00</div>
+                        <div class="status neutral">This semester</div>
+                    </div>
+                </div>
+
+                <div class="card next-payment-card">
+                    <div class="card-header">
+                        <h3>Next Payment</h3>
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <div class="card-content">
+                        <div class="amount">$425.00</div>
+                        <div class="status warning">Dec 15, 2024</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Payment Form Section -->
+            <section class="payment-section">
+                <div class="payment-form-container">
+                    <h2>Make a Payment</h2>
+                    <form class="payment-form">
+                        <div class="form-group">
+                            <label for="fee-type">Fee Type</label>
+                            <select id="fee-type" name="fee-type" required>
+                                <option value="">Select fee type</option>
+                                <option value="tuition">Tuition Fee</option>
+                                <option value="library">Library Fee</option>
+                                <option value="laboratory">Laboratory Fee</option>
+                                <option value="examination">Examination Fee</option>
+                                <option value="hostel">Hostel Fee</option>
+                                <option value="transport">Transport Fee</option>
+                            </select>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="amount">Amount ($)</label>
+                                <input type="number" id="amount" name="amount" placeholder="Enter amount" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="semester">Semester</label>
+                                <select id="semester" name="semester" required>
+                                    <option value="">Select semester</option>
+                                    <option value="fall-2024">Fall 2024</option>
+                                    <option value="spring-2024">Spring 2024</option>
+                                    <option value="summer-2024">Summer 2024</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="payment-method">Payment Method</label>
+                            <div class="payment-methods">
+                                <label class="payment-option">
+                                    <input type="radio" name="payment-method" value="credit-card" checked>
+                                    <span class="payment-icon"><i class="fas fa-credit-card"></i></span>
+                                    <span>Credit Card</span>
+                                </label>
+                                <label class="payment-option">
+                                    <input type="radio" name="payment-method" value="debit-card">
+                                    <span class="payment-icon"><i class="fas fa-money-check"></i></span>
+                                    <span>Debit Card</span>
+                                </label>
+                                <label class="payment-option">
+                                    <input type="radio" name="payment-method" value="bank-transfer">
+                                    <span class="payment-icon"><i class="fas fa-university"></i></span>
+                                    <span>Bank Transfer</span>
+                                </label>
+                                <label class="payment-option">
+                                    <input type="radio" name="payment-method" value="digital-wallet">
+                                    <span class="payment-icon"><i class="fas fa-mobile-alt"></i></span>
+                                    <span>Digital Wallet</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="card-number">Card Number</label>
+                            <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456" maxlength="19">
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="expiry">Expiry Date</label>
+                                <input type="text" id="expiry" name="expiry" placeholder="MM/YY" maxlength="5">
+                            </div>
+                            <div class="form-group">
+                                <label for="cvv">CVV</label>
+                                <input type="text" id="cvv" name="cvv" placeholder="123" maxlength="3">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cardholder-name">Cardholder Name</label>
+                            <input type="text" id="cardholder-name" name="cardholder-name" placeholder="Enter cardholder name">
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="button" class="btn-secondary">Save for Later</button>
+                            <button type="submit" class="btn-primary">
+                                <i class="fas fa-lock"></i>
+                                Pay Securely
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Payment Summary -->
+                <div class="payment-summary">
+                    <h3>Payment Summary</h3>
+                    <div class="summary-item">
+                        <span>Subtotal</span>
+                        <span>$850.00</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Processing Fee</span>
+                        <span>$15.00</span>
+                    </div>
+                    <div class="summary-divider"></div>
+                    <div class="summary-item total">
+                        <span>Total Amount</span>
+                        <span>$865.00</span>
+                    </div>
+                    <div class="security-info">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>256-bit SSL encrypted payment</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Payment History -->
+            <section class="history-section">
+                <h2>Recent Payment History</h2>
+                <div class="history-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Fee Type</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                                <th>Receipt</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Nov 15, 2024</td>
+                                <td>Tuition Fee</td>
+                                <td>$1,200.00</td>
+                                <td><span class="status-badge success">Paid</span></td>
+                                <td><button class="btn-download"><i class="fas fa-download"></i></button></td>
+                            </tr>
+                            <tr>
+                                <td>Oct 10, 2024</td>
+                                <td>Laboratory Fee</td>
+                                <td>$150.00</td>
+                                <td><span class="status-badge success">Paid</span></td>
+                                <td><button class="btn-download"><i class="fas fa-download"></i></button></td>
+                            </tr>
+                            <tr>
+                                <td>Sep 25, 2024</td>
+                                <td>Library Fee</td>
+                                <td>$75.00</td>
+                                <td><span class="status-badge success">Paid</span></td>
+                                <td><button class="btn-download"><i class="fas fa-download"></i></button></td>
+                            </tr>
+                            <tr>
+                                <td>Sep 01, 2024</td>
+                                <td>Hostel Fee</td>
+                                <td>$800.00</td>
+                                <td><span class="status-badge pending">Pending</span></td>
+                                <td><button class="btn-download" disabled><i class="fas fa-download"></i></button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="#">Fee Structure</a>
+                <a href="#">Payment Policies</a>
+                <a href="#">Refund Policy</a>
+            </div>
+            <div class="footer-section">
+                <h4>Support</h4>
+                <a href="#">Help Center</a>
+                <a href="#">Contact Support</a>
+                <a href="#">Live Chat</a>
+            </div>
+            <div class="footer-section">
+                <h4>Security</h4>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Security Information</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 EduPay Portal. All rights reserved. | Secure payments powered by SSL encryption</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
