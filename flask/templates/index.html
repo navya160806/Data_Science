@@ -1,1 +1,99 @@
-index.htmlindex.htmlindex.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ration Distributor Portal</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Navbar -->
+  <header class="bg-green-800 text-white p-4 fixed w-full top-0 shadow z-10">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Ration Distributor Portal</h1>
+      <nav class="space-x-4">
+        <a href="#login" class="hover:underline">Login</a>
+        <a href="#info" class="hover:underline">Information</a>
+        <a href="#contact" class="hover:underline">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="h-screen flex items-center justify-center bg-cover bg-center mt-16" style="background-image: url('https://images.unsplash.com/photo-1586864387782-592d1ae2956a?auto=format&fit=crop&w=1400&q=80');">
+    <div class="bg-black bg-opacity-60 backdrop-blur-sm p-10 rounded-xl text-center text-white max-w-2xl mx-auto">
+      <h1 class="text-4xl font-bold mb-4">Welcome to Ration Distributor Portal</h1>
+      <p class="text-lg">Manage distribution, verify beneficiaries, and maintain transparency in ration delivery.</p>
+    </div>
+  </section>
+
+  <!-- Login Section -->
+  <section id="login" class="py-16 bg-white">
+    <div class="max-w-md mx-auto bg-gray-100 p-8 rounded-lg shadow-lg">
+      <h2 class="text-2xl font-bold text-center text-green-800 mb-6">Distributor Login</h2>
+      <form>
+        <div class="mb-4">
+          <label class="block mb-1 font-medium">Distributor ID or Email</label>
+          <input type="text" placeholder="e.g. distributor@example.com" class="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500">
+        </div>
+        <div class="mb-4">
+          <label class="block mb-1 font-medium">Password</label>
+          <input type="password" placeholder="••••••••" class="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-green-500">
+        </div>
+        <button type="submit" class="w-full bg-green-700 text-white py-2 rounded hover:bg-green-800 transition">Login</button>
+        <p class="text-sm mt-3 text-center"><a href="#" class="text-green-700 hover:underline">Forgot Password?</a></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Information Section -->
+  <section id="info" class="bg-green-50 py-16">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold text-green-900 mb-6">Why Use This Portal?</h2>
+      <p class="text-lg text-gray-700 mb-10">The Ration Distributor Portal aims to simplify and digitize the public distribution system. It ensures timely delivery, accurate tracking, and full transparency in the ration allocation process.</p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h3 class="text-xl font-bold text-green-800 mb-2">✅ Track Beneficiaries</h3>
+          <p class="text-gray-700">Instant access to beneficiary records with real-time eligibility checks and verification tools.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h3 class="text-xl font-bold text-green-800 mb-2">📦 Stock Management</h3>
+          <p class="text-gray-700">Monitor inventory levels and distribution history to reduce wastage and fraud.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h3 class="text-xl font-bold text-green-800 mb-2">📊 Reporting & Analytics</h3>
+          <p class="text-gray-700">Generate monthly or daily reports to assess delivery status, grievances, and performance metrics.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="bg-green-100 py-16">
+    <div class="max-w-5xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="bg-green-900 text-white p-8 rounded-lg shadow-md">
+        <h3 class="text-2xl font-semibold mb-6">📞 Contact Information</h3>
+        <p><strong>Address:</strong><br> Ration Distribution Office<br>123 Supply Lane, District HQ</p>
+        <p class="mt-4"><strong>Phone:</strong><br> +91 98765 43210</p>
+        <p class="mt-4"><strong>Email:</strong><br> support@rationportal.gov.in</p>
+        <p class="mt-4"><strong>Hours:</strong><br> Mon–Fri: 9 AM – 6 PM</p>
+      </div>
+
+      <div class="rounded-lg shadow-md overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1586862965173-87543c2f54ae?auto=format&fit=crop&w=900&q=60" alt="Ration Distribution" class="w-full h-full object-cover">
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center text-gray-600 text-sm py-4">
+    © 2025 Ration Distributor Portal. All rights reserved.
+  </footer>
+
+</body>
+</html>

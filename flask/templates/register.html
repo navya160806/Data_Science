@@ -1,167 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background: url("https://images.unsplash.com/photo-1485802007047-7774de7208e5?dpr=1&auto=compress,format&fit=crop&w=1800&h") no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Droid Serif', serif;
+}
+
+#container {
+    background: rgba(3, 3, 55, 0.5);
+    width: 18.75rem;
+    height: 25rem;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+header {
+    text-align: center;
+    vertical-align: middle;
+    line-height: 3rem;
+    height: 3rem;
+    background: rgba(3, 3, 55, 0.7);
+    font-size: 1.4rem;
+    color: #d3d3d3;
+}
+
+fieldset {
+    border: 0;
+    text-align: center;
+}
+
+input[type="submit"] {
+    background: rgba(235, 30, 54, 1);
+    border: 0;
+    display: block;
+    width: 70%;
+    margin: 0 auto;
+    color: white;
+    padding: 0.7rem;
+    cursor: pointer;
+}
+
+input {
+    background: transparent;
+    border: 0;
+    border-left: 4px solid;
+    border-color: #FF0000;
+    padding: 10px;
+    color: white;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    outline: 0;
+    background: rgba(235, 30, 54, 0.3);
+    border-radius: 1.2rem;
+    border-color: transparent;
+}
+
+::placeholder {
+    color: #d3d3d3;
+}
+
+/*Media queries */
+
+@media all and (min-width: 481px) and (max-width: 568px) {
+    #container {
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
+}
+    @media all and (min-width: 569px) and (max-width: 768px) {
+        #container {
+            margin-top: 5%;
+            margin-bottom: 5%;
+        }
+    }</style>
+</head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-* {
-    box-sizing: border-box;
-}
-body {
-    font-family: 'Open Sans', sans-serif;
-    background: #f4f6fa;
-    padding: 15px;
-}
-
-.container {
-    max-width: 600px;
-    margin: 25px auto;
-    padding: 25px;
-}
-
-.container > div {
-    padding: 20px 10px;
-}
-
-.container .boxs {
-    display: flex;
-    justify-content: space-between;
-    background: #f1f3fa;
-    border-radius: 7px;
-}
-.container .boxs .box {
-    cursor: pointer;
-    width: 31%;
-    padding: 10px;
-    text-align: center;
-    border-radius: 7px;
-    transition: all .5s ease-out;
-}
-.container .boxs,
-.container .boxs .box.active,
-.container .boxs .box:hover {
-    box-shadow: 0px 0px 17px rgba(0, 0, 0, .7);
-}
-.container .boxs .box .fas {
-    color: #FFF;
-    height: 70px;
-    width: 70px;
-    line-height: 70px;
-    border-radius: 50%;
-}
-.container .boxs .box:nth-of-type(1) .fas {
-    background: #fb7070;
-}
-.container .boxs .box:nth-of-type(2) .fas {
-    background: #fbaa70;
-}
-.container .boxs .box:nth-of-type(3) .fas {
-    background: #7f7afd;
-}
-.container .boxs .box h3 {
-    text-transform: uppercase;
-    font-size: 13.1px;
-    color: #080c1c55;
-}
-.container .boxs .box.active h3,
-.container .boxs .box:hover h3 {
-    color: #080c1c;
-}
-
-.container .text {
-    background: #e5e8f2;
-    border-radius: 7px;
-    margin: 50px 0;
-    box-shadow: inset 1px 1px 5px rgba(150, 150, 150, 1);
-}
-.container .text p {
-    margin: 0;
-    text-align: center;
-    font-size: 12.5px;
-    font-weight: bold;
-    color: #333;
-}
-
-.container .buttons {
-    display: flex;
-    justify-content: space-between;
-    padding: 0;
-}
-.container .buttons .btn {
-    width: 48%;
-    padding: 17px 25px;
-    border-radius: 50px;
-    font-weight: bold;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0px 0px 17px rgba(100, 100, 100, .7);
-    transition: all .5s;
-}
-.container .buttons .btn:hover {
-    box-shadow: none;
-}
-.container .buttons .btn.continue {
-    background: #7a90fd;
-    color: #FFF;
-}
-.container .buttons .btn.cancel {
-    background: transparent;
-    color: #7a90fd;
-}
-
-
-@media (max-width: 450px) {
-    .container {
-        max-width: 350px;
-        padding: 5px;
-        margin-top: 15px;
-    }
-    .container .boxs {
-        display: block;
-    }
-    .container .boxs .box {
-        width: 100%;
-        margin: 15px 0;
-    }
-
-    .container .buttons {
-        display: block;
-    }
-    .container .buttons .btn {
-        width: 100%;
-        margin-bottom: 15px;
-    }
-}
-</style>
 </head>
 <body>
-    <div class="container">
-        <div class="boxs">
-            <div class="box">
-                <i class="fas fa-credit-card fa-2x"></i>
-                <h3>Credit Card</h3>
-            </div>
-            <div class="box active">
-                <i class="fas fa-gift fa-2x"></i>
-                <h3>Credit Card</h3>
-            </div>
-            <div class="box">
-                <i class="fas fa-shopping-bag fa-2x"></i>
-                <h3>Credit Card</h3>
-            </div>
-        </div>
-        <div class="text">
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua.
-                <a href="#">Enable notifications</a>
-            </p>
-        </div>
-        <div class="buttons">
-            <button class="btn continue">Continue</button>
-            <button class="btn cancel">Cancel</button>
-        </div>
-    </div>
+    <body>
+      <div id="container">
+         <header>Register new account</header>
+         <form method="post">
+            <fieldset>
+               <br/>
+               <input type="text" name="username" id="username" placeholder="Username" required autofocus>
+               <br/><br/>
+               <input type="email" name="email" id="email" placeholder="E-mail" required>
+               <br/><br/>
+               <input type="password" name="password" id="password" placeholder="Password" required>
+               <br/><br/>
+               <input type="password" name="confirm-password" id="confirm-password" placeholder="Confirm Password" required>
+               <br/> <br/> <br/>
+               <label for="submit"></label>
+               <input type="submit" name="submit" id="submit" value="REGISTER">
+            </fieldset>
+         </form>
+      </div>
+   </body>
 </body>
 </html>
